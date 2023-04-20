@@ -11,9 +11,9 @@ export default function Footer() {
                 <p>info@sovico.co.kr</p>
             </div>
             <div className="footer_right">
-                <div className="pinterest"><Link to='https://www.pinterest.co.kr/marshallheadphones/' target="_blank" rel="noopener noreferrer" >SNS</Link></div>
-                <div className="facebook"><Link to='https://www.facebook.com/marshallheadphones/' target="_blank" rel="noopener noreferrer">SNS</Link></div>
-                <div className="instagram"><Link to='https://instagram.com/marshallrecords?igshid=YmMyMTA2M2Y=' target="_blank" rel="noopener noreferrer">SNS</Link></div>
+                <div className="pinterest"><img src={process.env.PUBLIC_URL + "/pinterest.svg"} alt="pinterest" /><Link to='https://www.pinterest.co.kr/marshallheadphones/' target="_blank" rel="noopener noreferrer" ></Link></div>
+                <div className="facebook"><img src={process.env.PUBLIC_URL + "/facebook.svg"} alt="facebook" /><Link to='https://www.facebook.com/marshallheadphones/' target="_blank" rel="noopener noreferrer"></Link></div>
+                <div className="instagram"><img src={process.env.PUBLIC_URL + "/instagram.svg"} alt="instagram" /><Link to='https://instagram.com/marshallrecords?igshid=YmMyMTA2M2Y=' target="_blank" rel="noopener noreferrer"></Link></div>
             </div>
         </div>
     </div>

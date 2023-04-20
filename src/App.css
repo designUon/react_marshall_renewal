@@ -108,6 +108,13 @@ header{
   margin-left: 25px;
 }
 
+.instagram>img{
+  margin-top: 1px;
+}
+
+.pinterest>img{
+  margin-top: 4px;
+}
 
 /* ------------------ footer ------------------ */
 

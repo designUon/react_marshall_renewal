@@ -11,12 +11,16 @@
 }
 
 
-
+#swiper2 {
+    height: 550px;
+    /* border: 1px solid #E2DDC9; */
+    margin: 150px 0;
+}
 
 #swiper2 .swiper {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 100px;
+    /* padding: 50px 0; */
 }
 
 #swiper2 .swiper-slide {
@@ -65,4 +69,62 @@
 
 .swiper-3d .swiper-slide-shadow-left {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+.productlist_wrap {
+    width: 1280px;
+    height: 840px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    /* border: 1px solid #E2DDC9; */
+    /* position: relative; */
+}
+
+.productlist_image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.productlist_box {
+    width: 300px;
+    height: 400px;
+    margin: 10px 10px;
+    border: 1px solid #E2DDC9;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.productlist_wrap {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.productlist_wrap.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product_btns{
+    width: 55px;
+    height: 25px;
+    /* border: 1px solid #E2DDC9; */
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.like_btn, .cart_btn{
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+
+.cart_btn{
+    margin-left: 5px;
 }
