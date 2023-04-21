@@ -5,7 +5,7 @@ import '../css/about.css'
 
 export default function AboutStory() {
   return (
-    <div>
+    <div className='about_story_wrap'>
         <StoryComp/>
     </div>
   )

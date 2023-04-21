@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 import '../css/login.css'
 
 export default function Login() {
@@ -13,7 +15,7 @@ export default function Login() {
                 <input type="text" placeholder='PW'/>
                 <br/>
                 <div className="login_btn">LOGIN</div>
-                <div className='join_btn'>MEMBER JOIN</div>
+                <div className='join_btn'><Link to='/join'>MEMBER JOIN</Link></div>
                 <ul className='find_btn'>
                     <li>FIND ID</li>
                     <li>FIND PW</li>

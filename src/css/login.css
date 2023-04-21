@@ -79,3 +79,23 @@
     font-size: 13px;
     margin-top: 4px;
 }
+
+
+/* --------------------------- join ------------------------------ */
+
+.join_wrap{
+    width: 100%;
+    height: 70vh;
+}
+
+.join_inputbox{
+    width: 700px;
+    height: 200px;
+    margin: 100px auto;
+    border: 1px solid #E2DDC9;
+}
+
+.join_agree textarea{
+    padding: 20px;
+    font-size: 12px;
+}
