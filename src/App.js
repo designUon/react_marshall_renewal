@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Product from './pages/Product';
 import About from './pages/About';
 import LoginJoin from './pages/LoginJoin';
+import Cart from './pages/Cart';
 import { ProductContextProvider } from './context/ProductContext';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/join' element={<LoginJoin/>}/>
           <Route path='/product' element={<Product/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='/cart' element={<Cart/>}/>
         </Route>
         
       </Routes>

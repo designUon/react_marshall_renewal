@@ -85,17 +85,71 @@
 
 .join_wrap{
     width: 100%;
-    height: 70vh;
+    height: 1250px;
+    font-size: 14px;
 }
 
 .join_inputbox{
     width: 700px;
-    height: 200px;
+    height: 170px;
     margin: 100px auto;
-    border: 1px solid #E2DDC9;
+    padding-top: 30px;
+    border-top: 1px solid #E2DDC9;
+    border-bottom: 1px solid #E2DDC9;
+}
+
+.join_text{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    text-align: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.join_inputbox input{
+    width: 170px;
+    height: 20px;
+}
+
+
+.join_agree_wrap{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.join_agree{
+    text-align: left;
 }
 
 .join_agree textarea{
     padding: 20px;
     font-size: 12px;
+}
+
+.join_agree p{
+    margin: 7px;
+    margin-left: -2px;
+}
+
+.check_box{
+    float: right;
+}
+
+.join_last_btn{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #E2DDC9;
+    font-size: 18px;
+    line-height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 50px auto;
+}
+
+.join_last_btn:hover{
+    border: 1px solid #181818;
+    background-color: #E2DDC9;
+    color: #181818;
+    transition: all 0.5s;
 }
