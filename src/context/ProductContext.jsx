@@ -1,9 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React, {useState} from "react";
 
-const ProductContext = createContext();
+const ProductContext = React.createContext("");
 
 const ProductContextProvider = ({ children }) => {
-    const [products, setProducts] = useState([
+    const [productList, setProductList] = useState([
         { id: 1, name: "Acton-ii", price: 500000, image: "/001_marshall-acton-ii-black.png" },
         { id: 2, name: "Acton-iii", price: 450000, image: "/002_marshall-acton-iii-black.png" },
         { id: 3, name: "Stanmore-iii", price: 400000, image: "/003_marshall-stanmore-iii-black.png" },
@@ -18,12 +18,32 @@ const ProductContextProvider = ({ children }) => {
         };
     }));
 
+
+
+    const [cartlist, setCartlist] = useState(
+        [
+            // {
+            //     id : 1,
+            //     name : "Acton-ii",
+            //     image: "/001_marshall-acton-ii-black.png"
+            // }
+        ]
+    )
+    
+
+
+    const value = {
+        state : {productList, cartlist},
+        action : {setProductList, setCartlist}
+    }
+
+
     return (
-        <ProductContext.Provider value={{ products }}>
+        <ProductContext.Provider value={value}>
             {children}
         </ProductContext.Provider>
     );
 };
 
-export default ProductContext;
 export { ProductContextProvider };
+export default ProductContext;
