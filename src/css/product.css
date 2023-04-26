@@ -136,21 +136,19 @@
 /* ----------------------------- cart --------------------------- */
 
 
-
-.cart_del_btn{
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border: 1px solid #E2DDC9;
-    color: #E2DDC9;
-    background-color: transparent;
+.cart_title{
+    margin: 70px auto;
+    font-size: 18px;
+    width: 100px;
+    border-left: 2px solid #E2DDC9;
+    border-right: 2px solid #E2DDC9;
 }
 
 .cart_wrap{
     width: 600px;
-    height: 51vh;
-    /* border: 1px solid #E2DDC9; */
-    margin: 100px auto;
+    height: 45vh;
+    border-top: 2px solid #E2DDC9;
+    margin: -30px auto;
 }
 
 .cart_box{
@@ -160,45 +158,184 @@
     border-bottom: 1px solid #E2DDC9;
 }
 
+.cart_check{
+    float: left;
+    margin-top: 21px;
+    margin-left: 10px;
+    width: 17px;
+    height: 17px;
+    accent-color: #E2DDC9;
+}
+
 .cart_img_box{
     width: 100px;
     height: 90px;
     /* border: 1px solid #E2DDC9; */
     float: left;
+    margin-left: 30px;
 }
 
 .cart_img_box img{
+    width: 100%;
+    margin-top: -30px;
+    transform: scale(1.2);
+}
+
+.cart_text{
+    width: calc(100% - 230px);
+    height: 30px;
+    /* border: 1px solid #E2DDC9; */
+    float: right;
+    margin-top: 20px;
+}
+
+.cart_name{
+    width: 190px;
+    text-align: left;
+    float: left;
+    /* border: 1px solid #E2DDC9; */
+}
+
+.cart_price{
+    float: left;
+    text-align: left;
+    /* border: 1px solid #E2DDC9; */
+    width: 100px;
+}
+
+.cart_del_btn{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid #E2DDC9;
+    color: #E2DDC9;
+    background-color: transparent;
+    float: right;
+    /* margin-top: -20px; */
+    margin-right: 15px;
+}
+
+.total_box{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #E2DDC9;
+    margin-top: 50px;
+    /* margin-right: 10px; */
+}
+
+.total_box li{
+    /* height: 70px; */
+    line-height: 25px;
+    float: right;
+    font-size: 20px;
+    /* border: 1px solid #E2DDC9; */
+}
+
+.total_calc, .total_ea{
+    margin-left: 20px;
+}
+
+.total_calc{
+    margin-right: 15px;
+}
+
+.total_ea{
+    width: 75px;
+    height: 25px;
+    border-right: 1px solid #E2DDC9;
+}
+
+.order_btn{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #E2DDC9;
+    font-size: 18px;
+    line-height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 130px;
+}
+
+.order_btn:hover{
+    border: 1px solid #181818;
+    background-color: #E2DDC9;
+    color: #181818;
+    transition: all 0.5s;
+}
+
+
+/* ----------------------------- like --------------------------- */
+
+
+.like_title{
+    margin: 70px auto;
+    font-size: 18px;
+    width: 100px;
+    border-left: 2px solid #E2DDC9;
+    border-right: 2px solid #E2DDC9;
+}
+
+.like_wrap{
+    width: 600px;
+    height: 60vh;
+    border-top: 1px solid #E2DDC9;
+    margin: -30px auto;
+}
+
+.like_box{
+    width: 25%;
+    height: 150px;
+    margin-top: 30px;
+    border-bottom: 1px solid #E2DDC9;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+}
+
+.like_img_box{
+    width: 80%;
+    height: 90px;
+    /* border: 1px solid #E2DDC9; */
+    float: left;
+    margin-left: 10%;
+}
+
+.like_img_box img{
     width: 100%;
     margin-top: -20px;
     transform: scale(1.2);
 }
 
-.cart_text{
-    width: calc(100% - 150px);
-    height: 90px;
+.like_text{
+    width: 100%;
+    height: 25px;
+    text-align: center;
     /* border: 1px solid #E2DDC9; */
     float: right;
+    margin-top: 30px;
+    font-size: 15px;
 }
 
-.cart_name{
-    float: left;
+.like_name{
+    text-align: center;
     /* border: 1px solid #E2DDC9; */
+}
+
+.like_price{
     margin-top: 40px;
 }
 
-.cart_price{
-    margin-top: 40px;
+.like_del_btn{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    color: #E2DDC9;
+    background-color: transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
 }
-
-.cart_del_btn{
-    float: right;
-    margin-top: -20px;
-}
-
-
-
-
-
-
 
 

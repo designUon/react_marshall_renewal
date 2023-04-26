@@ -27,8 +27,8 @@ export default function ProductList() {
             const newcart = {
                 id: product.id,
                 name: product.name,
-                price : product.price,
-                image : product.image,
+                price: product.price,
+                image: product.image,
             }
             const newCartlist = value.state.cartlist.concat(newcart);
             value.action.setCartlist(newCartlist);
@@ -47,27 +47,57 @@ export default function ProductList() {
 
     const isVisible = entry?.isIntersecting;
 
-    const handleLikeClick = (productId) => {
-        if (likedProducts.includes(productId)) {
-            setLikedProducts(likedProducts.filter(id => id !== productId));
+
+
+    // // ---------------------------------------------------------------------------------------
+
+    // const likeClick = (productId) => {
+    //     if (likedProducts.includes(productId)) {
+    //         setLikedProducts(likedProducts.filter(id => id !== productId));
+    //     } else {
+    //         setLikedProducts([...likedProducts, productId]);
+    //     }
+    // };
+
+
+    // // ---------------------------------------------------------------------------------------
+
+
+    // const likeButton = (productId) => {
+    //     const isLiked = likedProducts.includes(productId);
+    //     const imageName = isLiked ? 'like.svg' : 'unlike.svg';
+    //     const buttonText = isLiked ? 'Unlike' : 'Like';
+    //     return (
+    //         <button className="like_btn" onClick={() => likeClick(productId)}>
+    //             <img src={process.env.PUBLIC_URL + `/${imageName}`} alt={buttonText} />
+    //         </button>
+    //     );
+    // };
+
+    const likeClick = (product) => {
+
+        if (value.state.likelist.find((like) => (like.id === product.id))) {
+
+            const newlikelist = value.state.likelist.filter(
+                (like) => (like.id !== product.id))
+            value.action.setLikelist(newlikelist);
         } else {
-            setLikedProducts([...likedProducts, productId]);
+            const newlike = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+            }
+            const newLikelist = value.state.likelist.concat(newlike);
+            value.action.setLikelist(newLikelist);
         }
-    };
 
-    const renderLikeButton = (productId) => {
-        const isLiked = likedProducts.includes(productId);
-        const imageName = isLiked ? 'like.svg' : 'unlike.svg';
-        const buttonText = isLiked ? 'Unlike' : 'Like';
-        return (
-            <button className="like_btn" onClick={() => handleLikeClick(productId)}>
-                <img src={process.env.PUBLIC_URL + `/${imageName}`}  alt={buttonText} />
-            </button>
-        );
-    };
+        navigate('/mypage');
 
 
-    // -------------------------------------------------------------------------------------
+    }
+
+    // // -------------------------------------------------------------------------------------
 
 
     return (
@@ -88,7 +118,14 @@ export default function ProductList() {
                             </span> */}
 
                             <div className="product_btns">
-                                {renderLikeButton(product.id)}
+                                {/* {likeButton(product.id)} */}
+                                <div onClick={() => { likeClick(product) }} className='like_btn'>
+                                    {
+                                        // value.state.user.login &&
+                                        (value.state.likelist.find((like) => (like.id === product.id))
+                                            ? <img src={process.env.PUBLIC_URL + `/like.svg`} alt="버튼" />: <img src={process.env.PUBLIC_URL + `/unlike.svg`} alt="버튼" />)
+                                    }
+                                </div>
                                 <div className="cart_btn"
                                     onClick={() => { cartClick(product) }}
                                 >

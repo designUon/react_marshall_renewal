@@ -14,6 +14,7 @@ const ProductContextProvider = ({ children }) => {
     ].map(product => {
         return {
             ...product,
+            price: product.price.toLocaleString(),
             image: process.env.PUBLIC_URL + product.image
         };
     }));
@@ -30,11 +31,12 @@ const ProductContextProvider = ({ children }) => {
         ]
     )
     
+    const [likelist, setLikelist] = useState([])
 
 
     const value = {
-        state : {productList, cartlist},
-        action : {setProductList, setCartlist}
+        state : {productList, cartlist, likelist},
+        action : {setProductList, setCartlist, setLikelist}
     }
 
 
