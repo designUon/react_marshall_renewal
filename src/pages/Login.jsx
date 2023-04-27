@@ -9,10 +9,10 @@ export default function Login() {
         <form className="login_box">
             {/* <h4>LOGIN</h4> */}
                 {/* <label htmlFor="">ID</label> */}
-                <input type="text" placeholder='ID'/>
+                <input type="text" placeholder='ID' className='input_id'/>
                 <br/>
                 {/* <label htmlFor="">PASSWORD</label> */}
-                <input type="text" placeholder='PW'/>
+                <input type="text" placeholder='PW' className='input_pw'/>
                 <br/>
                 <div className="login_btn">LOGIN</div>
                 <div className='join_btn'><Link to='/join'>MEMBER JOIN</Link></div>

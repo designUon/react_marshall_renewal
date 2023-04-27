@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import ProductContextProvider from '../context/ProductContext'
+// import ProductContextProvider from '../context/ProductContext'
 import ProductList from '../context/ProductList'
 
 import ProductSlide from '../components/ProductSlide'

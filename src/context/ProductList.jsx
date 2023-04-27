@@ -111,7 +111,7 @@ export default function ProductList() {
 
                             <img src={product.image} alt={product.name} className="productlist_image" />
                             <span>{product.name}</span>
-                            <p>{product.price}</p>
+                            <p>{product.price.toLocaleString()}</p>
 
                             {/* <span onClick={() => { cartClick(product) }} >
                                 <span><b>+</b></span>

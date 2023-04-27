@@ -146,7 +146,7 @@
 
 .cart_wrap{
     width: 600px;
-    height: 45vh;
+    /* height: 45vh; */
     border-top: 2px solid #E2DDC9;
     margin: -30px auto;
 }
@@ -253,7 +253,7 @@
     line-height: 30px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 100px auto;
     margin-bottom: 130px;
 }
 

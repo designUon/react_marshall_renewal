@@ -14,7 +14,8 @@ const ProductContextProvider = ({ children }) => {
     ].map(product => {
         return {
             ...product,
-            price: product.price.toLocaleString(),
+            price: product.price,
+            // price: product.price.toLocaleString(),
             image: process.env.PUBLIC_URL + product.image
         };
     }));
