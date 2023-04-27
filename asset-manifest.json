@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_marshall_renewal/static/css/main.11a2d093.css",
-    "main.js": "/react_marshall_renewal/static/js/main.611d2c87.js",
+    "main.css": "/react_marshall_renewal/static/css/main.7e2c3c58.css",
+    "main.js": "/react_marshall_renewal/static/js/main.3f3fe83a.js",
     "static/js/787.2b971896.chunk.js": "/react_marshall_renewal/static/js/787.2b971896.chunk.js",
     "static/media/speaker-audio-cable-35mm-black.png": "/react_marshall_renewal/static/media/speaker-audio-cable-35mm-black.882221eda94d0ce2151d.png",
     "static/media/marshall_slide_04.jpeg": "/react_marshall_renewal/static/media/marshall_slide_04.37eb6705ed2a710a7842.jpeg",
@@ -18,12 +18,12 @@
     "static/media/006_marshall-stockwell-ii-black-brass.png": "/react_marshall_renewal/static/media/006_marshall-stockwell-ii-black-brass.e77b889419cd964b3ea0.png",
     "static/media/Marshall_logo_w.png": "/react_marshall_renewal/static/media/Marshall_logo_w.eded87f420e9bab680cf.png",
     "index.html": "/react_marshall_renewal/index.html",
-    "main.11a2d093.css.map": "/react_marshall_renewal/static/css/main.11a2d093.css.map",
-    "main.611d2c87.js.map": "/react_marshall_renewal/static/js/main.611d2c87.js.map",
+    "main.7e2c3c58.css.map": "/react_marshall_renewal/static/css/main.7e2c3c58.css.map",
+    "main.3f3fe83a.js.map": "/react_marshall_renewal/static/js/main.3f3fe83a.js.map",
     "787.2b971896.chunk.js.map": "/react_marshall_renewal/static/js/787.2b971896.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.11a2d093.css",
-    "static/js/main.611d2c87.js"
+    "static/css/main.7e2c3c58.css",
+    "static/js/main.3f3fe83a.js"
   ]
 }
