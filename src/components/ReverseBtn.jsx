@@ -19,11 +19,11 @@ const styles = {
         // transition: 'background-image 500ms ease-in-out'
     },
     reversed: {
-        color: 'black',
+        color: '#E2DDC9',
         backgroundColor: 'white'
     },
     normal: {
-        color: 'white',
+        color: '#E2DDC9',
         backgroundColor: 'black'
     }
 };
