@@ -32,12 +32,20 @@ const ProductContextProvider = ({ children }) => {
         ]
     )
     
-    const [likelist, setLikelist] = useState([])
+    const [likelist, setLikelist] = useState([]);
+
+    const [id, setId] = useState();
+    const [user, setUser] = useState(
+        {
+            userId : "user",
+            login : false,
+        }
+    )
 
 
     const value = {
-        state : {productList, cartlist, likelist},
-        action : {setProductList, setCartlist, setLikelist}
+        state : {productList, cartlist, likelist, id, user},
+        action : {setProductList, setCartlist, setLikelist, setId, setUser}
     }
 
 

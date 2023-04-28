@@ -34,7 +34,7 @@
     color: #181818;
     line-height: 27px;
     margin-top: 20px;
-
+    cursor: pointer;
 }
 
 .join_btn{
@@ -48,9 +48,12 @@
     margin: 0 auto;
     height: 25px;
     font-size: 12px;
+    cursor: pointer;
     line-height: 25px;
     /* border: 1px solid #E2DDC9; */
 }
+
+
 
 .find_btn li{
     width: 50%;
@@ -62,14 +65,16 @@
     border: 1px solid #00c542;
     color: #00c542;
     font-size: 13px;
-    margin-top: 15px;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
-.naver_login{
-    /* background-color: #00c542; */
+.naver_login:hover{
     border: 1px solid #00c542;
-    color: #00c542;
-    font-size: 13px;
+    color: #181818;
+    background-color: #00c542;
+    transition: all 0.5s;
 }
 
 .kakao_login{
@@ -78,6 +83,15 @@
     color: #ffd900;
     font-size: 13px;
     margin-top: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.kakao_login:hover{
+    border: 1px solid #ffd900;
+    color: #181818;
+    background-color: #ffd900;
+    transition: all 0.5s;
 }
 
 
