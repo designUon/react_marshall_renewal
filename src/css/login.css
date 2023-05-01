@@ -29,8 +29,8 @@
 }
 
 .login_btn{
-    border: 1px solid #E2DDC9;
-    background-color: #E2DDC9;
+    border: 1px solid #b8b29e;
+    background-color: #b8b29e;
     color: #181818;
     line-height: 27px;
     margin-top: 20px;
@@ -38,7 +38,7 @@
 }
 
 .join_btn{
-    border-bottom: 1px solid #E2DDC9;
+    border-bottom: 1px solid #b8b29e;
     font-size: 12px;
     margin-top: 3px;
 }
@@ -108,8 +108,8 @@
     height: 170px;
     margin: 100px auto;
     padding-top: 30px;
-    border-top: 1px solid #E2DDC9;
-    border-bottom: 1px solid #E2DDC9;
+    border-top: 1px solid #b8b29e;
+    border-bottom: 1px solid #b8b29e;
 }
 
 .join_text{
@@ -146,6 +146,10 @@
     margin-left: -2px;
 }
 
+.join_agree_wrap input{
+    accent-color: #b8b29e;
+}
+
 .check_box{
     float: right;
 }
@@ -153,7 +157,7 @@
 .join_last_btn{
     width: 200px;
     height: 30px;
-    border: 1px solid #E2DDC9;
+    border: 1px solid #b8b29e;
     font-size: 18px;
     line-height: 30px;
     transition: all 0.5s;
@@ -163,7 +167,7 @@
 
 .join_last_btn:hover{
     border: 1px solid #181818;
-    background-color: #E2DDC9;
+    background-color: #b8b29e;
     color: #181818;
     transition: all 0.5s;
 }

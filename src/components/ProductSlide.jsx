@@ -37,10 +37,12 @@ export default function ProductSlide() {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
+                // pagination={true}
+                // modules={[EffectCoverflow, Pagination]}
+                modules={[EffectCoverflow]}
                 className="mySwiper"
                 id={swiper2Id}
+                initialSlide={2} // 세 번째 슬라이드를 초기에 보여줍니다.
             >
                 <SwiperSlide></SwiperSlide>
                 <SwiperSlide></SwiperSlide>

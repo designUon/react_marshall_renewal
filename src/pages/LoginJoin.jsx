@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginJoin() {
+
+    const navigate = useNavigate();
 
     const [text, setText] = useState('');
 
@@ -36,6 +39,49 @@ export default function LoginJoin() {
     }, []);
 
 
+    // ------------------------- checkAll ---------------------------
+    const [isCheckedAll, setIsCheckedAll] = useState(false);
+    const [isChecked1, setIsChecked1] = useState(false);
+    const [isChecked2, setIsChecked2] = useState(false);
+    const [isChecked3, setIsChecked3] = useState(false);
+    const [isChecked4, setIsChecked4] = useState(false);
+
+    const handleCheckAllChange = () => {
+        setIsCheckedAll(!isCheckedAll);
+        setIsChecked1(!isCheckedAll);
+        setIsChecked2(!isCheckedAll);
+        setIsChecked3(!isCheckedAll);
+        setIsChecked4(!isCheckedAll);
+    };
+
+    const handleCheckbox1Change = () => {
+        setIsChecked1(!isChecked1);
+    };
+
+    const handleCheckbox2Change = () => {
+        setIsChecked2(!isChecked2);
+    };
+
+    const handleCheckbox3Change = () => {
+        setIsChecked3(!isChecked3);
+    };
+
+    const handleCheckbox4Change = () => {
+        setIsChecked4(!isChecked4);
+    };
+
+    const handleSignupClick = () => {
+        if (!isChecked1 || !isChecked2) {
+            alert('[필수] 항목을 모두 체크해주세요.');
+        } else {
+            // 회원가입 처리
+            // console.log('회원가입 완료');
+            alert('회원가입을 축하드립니다');
+            navigate('/login');
+        }
+    };
+
+
     return (
         <div className='join_wrap'>
 
@@ -50,7 +96,7 @@ export default function LoginJoin() {
                 <input type="password" />
                 <br />
                 <div className="join_text">e-mail</div>
-                <input type="email" />
+                <input type="email" required/>
                 <br />
                 <div className="join_text">생년월일</div>
                 <input type="date" name="" id="" />
@@ -58,14 +104,19 @@ export default function LoginJoin() {
 
             <div className="join_agree_wrap">
 
-                <label>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다. </label>
-                <input type="checkbox" name="" id="" />
+                <label style={{ fontSize: "17px" }}>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 <b>모두 동의</b>합니다. </label>
+                {/* <input type="checkbox" name="" className='allcheck' /> */}
+                <input
+                    type="checkbox"
+                    checked={isCheckedAll}
+                    onChange={handleCheckAllChange}
+                />
 
-                <br/>
-                <br/>
+                <br />
+                <br />
 
                 <div className="join_agree">
-                    <p>[필수] 이용약관 동의</p>
+                    <p><b>[필수]</b> 이용약관 동의</p>
                     <textarea
                         name=""
                         id=""
@@ -76,14 +127,18 @@ export default function LoginJoin() {
                     <br />
                     <div className="check_box">
                         <label>이용약관에 동의하십니까? </label>
-                        <input type="checkbox" name="" id="" />
+                        <input
+                            type="checkbox"
+                            checked={isChecked1}
+                            onChange={handleCheckbox1Change}
+                        />
                     </div>
                 </div>
 
                 <br />
 
                 <div className="join_agree">
-                    <p>[필수] 개인정보 수집 및 이용 동의</p>
+                    <p><b>[필수]</b> 개인정보 수집 및 이용 동의</p>
                     <textarea
                         name=""
                         id=""
@@ -94,11 +149,15 @@ export default function LoginJoin() {
                     <br />
                     <div className="check_box">
                         <label>개인정보 수집 및 이용에 동의하십니까? </label>
-                        <input type="checkbox" name="" id="" />
+                        <input
+                            type="checkbox"
+                            checked={isChecked2}
+                            onChange={handleCheckbox2Change}
+                        />
                     </div>
                 </div>
 
-                <br/>
+                <br />
 
                 <div className="join_agree">
                     <p>[선택] 쇼핑정보 수신 동의</p>
@@ -112,14 +171,22 @@ export default function LoginJoin() {
                     <br />
                     <div className="check_box">
                         <label>SMS 수신을 동의하십니까? </label>
-                        <input type="checkbox" name="" id="" />
+                        <input
+                            type="checkbox"
+                            checked={isChecked3}
+                            onChange={handleCheckbox3Change}
+                        />
                     </div>
 
-                    <br/>
+                    <br />
 
                     <div className="check_box">
                         <label>이메일 수신을 동의하십니까? </label>
-                        <input type="checkbox" name="" id="" />
+                        <input
+                            type="checkbox"
+                            checked={isChecked4}
+                            onChange={handleCheckbox4Change}
+                        />
                     </div>
 
 
@@ -127,7 +194,7 @@ export default function LoginJoin() {
 
             </div>
 
-            <div className="join_last_btn">회원가입</div>
+            <div className="join_last_btn" onClick={handleSignupClick}>회원가입</div>
 
         </div>
     )

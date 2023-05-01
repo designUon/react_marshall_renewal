@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import "../App.css";
-
+import Header from './Header';
 
 const styles = {
     html: {
@@ -15,21 +15,15 @@ const styles = {
     footer: {
         transition: 'background-color 500ms ease-in-out'
     },
-    logo: {
-        // transition: 'background-image 500ms ease-in-out'
-    },
     reversed: {
-        color: '#E2DDC9',
+        color: '#b8b29e',
         backgroundColor: 'white'
     },
     normal: {
-        color: '#E2DDC9',
+        color: '#b8b29e',
         backgroundColor: 'black'
     }
 };
-
-
-
 
 export default function ReverseBtn() {
 
@@ -45,17 +39,12 @@ export default function ReverseBtn() {
         const body = document.body;
         const header = document.querySelector('header');
         const footer = document.querySelector('footer');
-        // const logo = document.querySelector('.header_logo');
         const style = isReversed ? styles.reversed : styles.normal;
 
         Object.assign(html.style, styles.html, style);
         Object.assign(body.style, styles.body, style);
         Object.assign(header.style, styles.header, style);
         Object.assign(footer.style, styles.footer, style);
-        // Object.assign(logo.style, styles.logo, style);
-
-    //     logo.style.backgroundImage = `url('../public/Marshall_logo_${isReversed ? 'b' : 'w'}.png')`;
-    // }, [isReversed]);
     });
 
     return (
@@ -64,8 +53,12 @@ export default function ReverseBtn() {
                 className={`reverse_btn ${isReversed ? 'reversed' : ''}`}
                 onClick={handleButtonClick}
             >
-                <img src={process.env.PUBLIC_URL + `${isReversed ? '/light_b.svg' : '/light_w.svg'}`} alt="버튼" />
+                <img
+                    src={process.env.PUBLIC_URL + `${isReversed ? '/light_b.svg' : '/light_w.svg'}`}
+                    alt="버튼"
+                />
             </button>
+            <Header isReversed={isReversed} />
         </div>
-    )
+    );
 }

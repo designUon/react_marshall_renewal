@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 // import '../App.css'
 import { Link } from 'react-router-dom'
 import ProductContext from '../context/ProductContext'
 
 
-export default function Header() {
+export default function Header(props) {
 
     const { state } = useContext(ProductContext);
 
@@ -16,7 +16,17 @@ export default function Header() {
         <div>
             <header>
                 <div className="header_wrap">
-                    <Link to='/' className='logo_box'><div className="header_logo"><img src={process.env.PUBLIC_URL + "/Marshall_logo_w.png"} alt="button" /></div></Link>
+                    {/* <Link to='/' className='logo_box'> */}
+                    <a href="/react_marshall_renewal" className='logo_box'>
+
+                        <div className="header_logo">
+                            <img
+                                src={process.env.PUBLIC_URL + `/Marshall_logo_${props.isReversed ? 'b' : 'w'}.png`}
+                                alt="button"
+                                />
+                        </div>
+                    </a>
+                    {/* </Link> */}
                     <ul className="main_menu">
                         <Link to='/product'><li>PRODUCT
                             <ul className='sub_menu'>

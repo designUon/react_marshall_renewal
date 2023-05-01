@@ -12,10 +12,10 @@ export default function Home() {
             <MainSlide/>
 
             <ul className='product_warp'>
-                <Link to='/product/'><li><div>SPEAKER</div></li></Link>
-                <Link to='/product/'><li><div>HEADPHONE</div></li></Link>
-                <Link to='/product/'><li><div>EARPHONE</div></li></Link>
-                <Link to='/product/'><li><div>ACCESSORY</div></li></Link>
+                <Link to='/product'><li><div>SPEAKER</div></li></Link>
+                <Link to='/product'><li><div>HEADPHONE</div></li></Link>
+                <Link to='/product'><li><div>EARPHONE</div></li></Link>
+                <Link to='/product'><li><div>ACCESSORY</div></li></Link>
             </ul>
 
         </div>

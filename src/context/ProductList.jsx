@@ -11,6 +11,14 @@ export default function ProductList() {
 
     const [likedProducts, setLikedProducts] = useState([]);
 
+    const cartaddCheck =()=>{
+        if(window.confirm("장바구니에 추가 하시겠습니까?")) {
+            navigate('/cart');
+        } else {
+            navigate('/product');
+        }
+    }
+
     const cartClick = (product) => {
 
         // 값이 있으면 삭제
@@ -33,8 +41,8 @@ export default function ProductList() {
             const newCartlist = value.state.cartlist.concat(newcart);
             value.action.setCartlist(newCartlist);
         }
-
-        navigate('/cart');
+        
+        cartaddCheck();
 
     }
 
@@ -93,8 +101,6 @@ export default function ProductList() {
         }
 
         navigate('/mypage');
-
-
     }
 
     // // -------------------------------------------------------------------------------------

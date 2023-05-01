@@ -17,7 +17,7 @@ function App() {
     <ProductContextProvider>
       <div className="App">
         <ReverseBtn/>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route>
             <Route path="/" element={<Home />} />

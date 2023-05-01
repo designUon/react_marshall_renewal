@@ -53,7 +53,7 @@
 
 
 :root {
-    --swiper-theme-color: #E2DDC9;
+    --swiper-theme-color: #b8b29e;
 }
 
 
@@ -80,7 +80,7 @@
 }
 
 .product_warp a{
-    color: #E2DDC9;
+    color: #b8b29e;
 }
 
 .product_warp a li{
@@ -99,19 +99,22 @@
 
 .product_warp a:nth-child(1)>li{
     background-image: url("../../public/marshall-stanmore-iii-black.png");
+    background-position-x: 80px;
 }
 
 .product_warp a:nth-child(2)>li{
     background-image: url("../../public/plp-diamond-jubilee-monitor-ii-anc-v2.png");
+    background-position-x: 100px;
 }
 
 .product_warp a:nth-child(3)>li{
     background-image: url("../../public/plp-diamond-jubilee-motif-anc-v2.png");
+    background-position-x: 90px;
 }
 
 .product_warp a:nth-child(4)>li{
     background-image: url("../../public/speaker-audio-cable-35mm-black.png");
-    background-position-x: 80px;
+    background-position-x: 120px;
     background-position-y: 170px;
 }
 
@@ -123,6 +126,6 @@
     left: -220px;
     /* border: 1px solid wheat; */
     font-size: 50px;
-    opacity: 0.15;
+    opacity: 0.3;
     font-weight: lighter;
 }
