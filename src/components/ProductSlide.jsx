@@ -26,6 +26,7 @@ export default function ProductSlide() {
     return (
         <>
             <Swiper
+                // style={{marginTop:"-80vh"}}
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}

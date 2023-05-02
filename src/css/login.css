@@ -68,6 +68,8 @@
     margin-top: 13px;
     cursor: pointer;
     transition: all 0.5s;
+    background-color: transparent;
+    box-sizing: content-box;
 }
 
 .naver_login:hover{

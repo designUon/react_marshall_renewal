@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 import '../css/login.css'
 import KakaoLogin from '../components/KakaoLogin';
+import NaverLogin from '../components/NaverLogin';
 
 export default function Login() {
 
@@ -51,7 +52,8 @@ export default function Login() {
                 </ul>
 
                 <div>
-                    <div className="naver_login">NAVER LOGIN</div>
+                    {/* <div className="naver_login">NAVER LOGIN</div> */}
+                    <NaverLogin/>
                     {/* <div className="kakao_login">KAKAO LOGIN</div> */}
                     <KakaoLogin/>
                 </div>
