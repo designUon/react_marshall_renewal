@@ -100,7 +100,7 @@ export default function ProductList() {
             value.action.setLikelist(newLikelist);
         }
 
-        navigate('/mypage');
+        // navigate('/mypage');
     }
 
     // // -------------------------------------------------------------------------------------
