@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Component } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginJoin() {
@@ -84,6 +84,8 @@ export default function LoginJoin() {
 
     return (
         <div className='join_wrap'>
+
+            <h3>d</h3>
 
             <div className="join_inputbox">
                 <div className="join_text">ID</div>

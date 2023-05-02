@@ -3,7 +3,9 @@ import {Link} from 'react-router-dom'
 import ProductContext from '../context/ProductContext';
 import { useNavigate } from 'react-router-dom';
 
+
 import '../css/login.css'
+import KakaoLogin from '../components/KakaoLogin';
 
 export default function Login() {
 
@@ -50,7 +52,8 @@ export default function Login() {
 
                 <div>
                     <div className="naver_login">NAVER LOGIN</div>
-                    <div className="kakao_login">KAKAO LOGIN</div>
+                    {/* <div className="kakao_login">KAKAO LOGIN</div> */}
+                    <KakaoLogin/>
                 </div>
         </form>
     </div>

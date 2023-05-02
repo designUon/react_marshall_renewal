@@ -94,6 +94,14 @@
     transition: all 0.5s;
 }
 
+.kakao_login img{
+    display: none;
+}
+
+.kakao_login::before{
+    content: "KAKAO LOGIN";
+    font-size: 13px;
+}
 
 /* --------------------------- join ------------------------------ */
 
