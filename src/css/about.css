@@ -32,7 +32,7 @@
     position: absolute;
     top: 20vh;
     right: 0;
-    z-index: 999;
+    z-index: 20;
 }
 
 .hand_img_L img{
@@ -41,7 +41,7 @@
     position: absolute;
     top: -15vh;
     left: 0;
-    z-index: 998;
+    z-index: 21;
 }
 
 .hand_img img{

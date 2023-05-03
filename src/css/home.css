@@ -70,24 +70,15 @@
     margin: 0;
 }
 
-.product_warp li{
-    width: 25%;
-    height: 600px;
-    /* border: 1px solid #E2DDC9; */
-    float: left;
-    box-sizing: border-box;
-    position: relative;
-}
-
 .product_warp a{
     color: #b8b29e;
 }
 
 .product_warp a li{
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-x: 50px;
-    background-position-y: 100px;
+    width: 25%;
+    height: 600px;
+    float: left;
+    position: relative;
     overflow: hidden;
 }
 
@@ -97,35 +88,94 @@
     background-color: #303030;
 }
 
-.product_warp a:nth-child(1)>li{
-    background-image: url("../../public/marshall-stanmore-iii-black.png");
-    background-position-x: 80px;
+.home_product_img{
+    width: 100%;
+    height: 600px;
 }
 
-.product_warp a:nth-child(2)>li{
-    background-image: url("../../public/plp-diamond-jubilee-monitor-ii-anc-v2.png");
-    background-position-x: 100px;
+.home_product_img img{
+    width: 450px;
+    position: absolute;
+    bottom: 0;
+    right: -80px;
 }
 
-.product_warp a:nth-child(3)>li{
-    background-image: url("../../public/plp-diamond-jubilee-motif-anc-v2.png");
-    background-position-x: 90px;
+.home_accessory img{
+    bottom: -50px;
 }
 
-.product_warp a:nth-child(4)>li{
-    background-image: url("../../public/speaker-audio-cable-35mm-black.png");
-    background-position-x: 120px;
-    background-position-y: 170px;
-}
-
-.product_warp a li div{
+.home_product_title{
     rotate: 90deg;
     text-align: left;
-    position: relative;
-    top: 205px;
-    left: -220px;
-    /* border: 1px solid wheat; */
+    position: absolute;
+    top: 70px;
+    left: -88px;
     font-size: 50px;
     opacity: 0.3;
-    font-weight: lighter;
+}
+
+.product_warp a:nth-child(2) .home_product_title{
+    top: 80px;
+    left: -132px;
+    /* background-color: aqua; */
+}
+
+.product_warp a:nth-child(3) .home_product_title{
+    top: 95px;
+    left: -112px;
+    /* background-color: aqua; */
+}
+
+.product_warp a:nth-child(4) .home_product_title{
+    top: 110px;
+    left: -127px;
+    /* background-color: aqua; */
+}
+
+
+
+/* -------------------------반응형 / Tab------------------------------- */
+
+
+/* @media (max-width:1200px) and (min-width:900px) { */
+@media (max-width:1200px) {
+
+    /* ------------------ main product ------------------ */
+
+    .home_product_title{
+        top: 65px;
+        left: -78px;
+        font-size: 45px;
+    }
+
+    .product_warp a:nth-child(2) .home_product_title{
+        top: 72px;
+        left: -118px;
+        /* background-color: aqua; */
+    }
+    
+    .product_warp a:nth-child(3) .home_product_title{
+        top: 85px;
+        left: -100px;
+        /* background-color: aqua; */
+    }
+    
+    .product_warp a:nth-child(4) .home_product_title{
+        top: 100px;
+        left: -115px;
+        /* background-color: aqua; */
+    }
+
+    .home_product_img img{
+        width: 380px;
+        position: absolute;
+        bottom: 0;
+        right: -110px;
+    }
+
+    .home_accessory img{
+        right: -140px;
+        bottom: -30px;
+    }
+
 }
