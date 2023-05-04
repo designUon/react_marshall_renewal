@@ -7,15 +7,24 @@ export default function Cart() {
     const [totalPrice, setTotalPrice] = useState(0);
 
     const deleteCart = (id) => {
+        if (!state.cartlist.find((cart) => cart.id === id)) {
+            return;
+        }
         const newCartList = state.cartlist.filter((cart) => cart.id !== id);
         action.setCartlist(newCartList);
+        setCheckedItems(checkedItems.filter((checkedItem) => checkedItem !== String(id)));
     };
+    
+
 
     const handleCheckboxChange = (event) => {
         const item = event.target.value;
         const isChecked = event.target.checked;
-
+    
         if (isChecked) {
+            if (!state.cartlist.find((cart) => cart.id === parseInt(item))) {
+                return;
+            }
             setCheckedItems([...checkedItems, item]);
         } else {
             setCheckedItems(checkedItems.filter((checkedItem) => checkedItem !== item));
@@ -26,7 +35,9 @@ export default function Cart() {
         let price = 0;
         checkedItems.forEach((item) => {
             const cartItem = state.cartlist.find((cart) => cart.id === parseInt(item));
-            price += cartItem.price;
+            if (cartItem) {
+                price += cartItem.price;
+            }
         });
         setTotalPrice(price);
     }, [checkedItems, state.cartlist]);

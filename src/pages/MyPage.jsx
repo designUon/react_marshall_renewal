@@ -28,7 +28,7 @@ export default function MyPage() {
                                 <span className='like_name'>{product.name}</span>
                                 {/* <p className='like_price'>{product.price}</p> */}
                                 <button className='like_del_btn' onClick={() => { deleteLike(product.id) }}
-                                ><img src={process.env.PUBLIC_URL + `/like.svg`} alt="버튼" /></button>
+                                ><img src={process.env.PUBLIC_URL + `/img/like.svg`} alt="버튼" /></button>
                             </div>
                         </li>
                     ))

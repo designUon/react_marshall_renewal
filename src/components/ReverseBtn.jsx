@@ -54,7 +54,7 @@ export default function ReverseBtn() {
                 onClick={handleButtonClick}
             >
                 <img
-                    src={process.env.PUBLIC_URL + `${isReversed ? '/light_b.svg' : '/light_w.svg'}`}
+                    src={process.env.PUBLIC_URL + `${isReversed ? '/img/light_b.svg' : '/img/light_w.svg'}`}
                     alt="버튼"
                 />
             </button>

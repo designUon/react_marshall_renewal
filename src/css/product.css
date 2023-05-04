@@ -41,23 +41,23 @@
 
 
 #swiper2 .swiper-slide:nth-child(1) {
-    background-image: url(../../public/mh-monitor-II-ANC-medium.png);
+    background-image: url(../../public/img/mh-monitor-II-ANC-medium.png);
 }
 
 #swiper2 .swiper-slide:nth-child(2) {
-    background-image: url(../../public/plp-marshall-motif-anc-black.png);
+    background-image: url(../../public/img/plp-marshall-motif-anc-black.png);
 }
 
 #swiper2 .swiper-slide:nth-child(3) {
-    background-image: url(../../public/006_marshall-stockwell-ii-black-brass.png);
+    background-image: url(../../public/img/006_marshall-stockwell-ii-black-brass.png);
 }
 
 #swiper2 .swiper-slide:nth-child(4) {
-    background-image: url(../../public/007_marshall-emberton-ii-black-brass.png);
+    background-image: url(../../public/img/007_marshall-emberton-ii-black-brass.png);
 }
 
 #swiper2 .swiper-slide:nth-child(5) {
-    background-image: url(../../public/004_pl-marshall-speakers-woburn-ii-black-1700x1700.png);
+    background-image: url(../../public/img/004_pl-marshall-speakers-woburn-ii-black-1700x1700.png);
 }
 
 

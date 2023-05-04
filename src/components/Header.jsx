@@ -41,7 +41,7 @@ export default function Header(props) {
 
                         <div className="header_logo">
                             <img
-                                src={process.env.PUBLIC_URL + `/Marshall_logo_${props.isReversed ? 'b' : 'w'}.png`}
+                                src={process.env.PUBLIC_URL + `/img/Marshall_logo_${props.isReversed ? 'b' : 'w'}.png`}
                                 alt="button"
                             />
                         </div>
@@ -81,7 +81,7 @@ export default function Header(props) {
                     <div className="burger_btn"
                         onClick={openBurgerPop}
                     >
-                        <img src={`${process.env.PUBLIC_URL}/burger_btn02.svg`} alt="이미지" />
+                        <img src={`${process.env.PUBLIC_URL}/img/burger_btn02.svg`} alt="이미지" />
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@ export default function Header(props) {
                         <div className="burger_close_btn"
                             onClick={closeBurgerPop}
                         >
-                            <img src={`${process.env.PUBLIC_URL}/burger_close_btn.svg`} alt="이미지" />
+                            <img src={`${process.env.PUBLIC_URL}/img/burger_close_btn.svg`} alt="이미지" />
                         </div>
 
                         <ul className="burger_main_menu">

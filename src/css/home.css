@@ -36,19 +36,19 @@
 }
 
 #swiper1 .swiper-slide:nth-child(1){
-    background-image: url(../../public/marshall_slide_01.jpg);
+    background-image: url(../../public/img/marshall_slide_01.jpg);
 }
 
 #swiper1 .swiper-slide:nth-child(2){
-    background-image: url(../../public/marshall_slide_03.jpg);
+    background-image: url(../../public/img/marshall_slide_03.jpg);
 }
 
 #swiper1 .swiper-slide:nth-child(3){
-    background-image: url(../../public/marshall_slide_04.jpeg);
+    background-image: url(../../public/img/marshall_slide_04.jpeg);
 }
 
 #swiper1 .swiper-slide:nth-child(4){
-    background-image: url(../../public/marshall_slide_05.jpeg);
+    background-image: url(../../public/img/marshall_slide_05.jpeg);
 }
 
 

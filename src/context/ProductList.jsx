@@ -111,13 +111,13 @@ export default function ProductList() {
                                     {
                                         // value.state.user.login &&
                                         (value.state.likelist.find((like) => (like.id === product.id))
-                                            ? <img src={process.env.PUBLIC_URL + `/like.svg`} alt="버튼" />: <img src={process.env.PUBLIC_URL + `/unlike.svg`} alt="버튼" />)
+                                            ? <img src={process.env.PUBLIC_URL + `/img/like.svg`} alt="버튼" />: <img src={process.env.PUBLIC_URL + `/img/unlike.svg`} alt="버튼" />)
                                     }
                                 </div>
                                 <div className="cart_btn"
                                     onClick={() => { cartClick(product) }}
                                 >
-                                    <img src={process.env.PUBLIC_URL + "/cart.svg"} alt="button" />
+                                    <img src={process.env.PUBLIC_URL + "/img/cart.svg"} alt="button" />
                                 </div>
                             </div>
 
