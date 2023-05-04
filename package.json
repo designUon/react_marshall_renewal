@@ -7,13 +7,14 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.2",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",
     "react-naver-maps": "^0.1.2",
     "react-player": "^2.12.0",
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "swiper": "^9.2.3",
@@ -25,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "serve": "node server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
 }

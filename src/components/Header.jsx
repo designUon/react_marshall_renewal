@@ -6,6 +6,15 @@ import ProductContext from '../context/ProductContext'
 
 export default function Header(props) {
 
+    const naverId = localStorage.getItem('naverId');
+    const isLoggedIn = !!naverId;
+
+    const handleLogout = () => {
+        // 로그아웃 처리를 합니다.
+        localStorage.removeItem('naverId');
+        // ...
+    };
+
     const { state } = useContext(ProductContext);
 
     const logout = () => {
@@ -13,13 +22,13 @@ export default function Header(props) {
     };
 
 
-    const[burgerOn, setBurgerOn] = useState(false);
+    const [burgerOn, setBurgerOn] = useState(false);
 
-    const openBurgerPop=()=>{
+    const openBurgerPop = () => {
         setBurgerOn(true);
     }
 
-    const closeBurgerPop=()=>{
+    const closeBurgerPop = () => {
         setBurgerOn(false);
     }
 
@@ -69,25 +78,26 @@ export default function Header(props) {
                 </div>
 
                 <div>
-                    <button className="burger_btn"
+                    <div className="burger_btn"
                         onClick={openBurgerPop}
                     >
                         <img src={`${process.env.PUBLIC_URL}/burger_btn02.svg`} alt="이미지" />
-                    </button>
+                    </div>
                 </div>
 
-                <div className="burger_menu" style={{display:burgerOn&&"block", transition:"all 1s"}}>
-
+                {/* <div className="burger_menu" style={{ display: burgerOn && "block", transition: "all 1s" }}> */}
+                <div className="burger_menu" style={{ display: burgerOn ? "block" : "none", transition: "all 1s" }}>
                     <div className="burger_text_wrap">
 
-                        <button className="burger_close_btn"
+                        <div className="burger_close_btn"
                             onClick={closeBurgerPop}
                         >
                             <img src={`${process.env.PUBLIC_URL}/burger_close_btn.svg`} alt="이미지" />
-                        </button>
+                        </div>
 
                         <ul className="burger_main_menu">
-                            <Link to='/product'><li>PRODUCT
+                            {/* <Link to="/" onClick={() => closeBurgerPop(false)}>Go Home</Link> */}
+                            <Link to='/product' onClick={() => closeBurgerPop()}><li>PRODUCT
                                 <ul className='burger_sub_menu'>
                                     <Link to='/product'><li>스피커</li></Link>
                                     <Link to='/product'><li>헤드폰</li></Link>
@@ -95,7 +105,7 @@ export default function Header(props) {
                                     <Link to='/product'><li>악세사리</li></Link>
                                 </ul>
                             </li></Link>
-                            <Link to='/about'><li>ABOUT
+                            <Link to='/about' onClick={() => closeBurgerPop()}><li>ABOUT
                                 <ul className='burger_sub_menu'>
                                     <Link to='/about'><li>스토리</li></Link>
                                     <Link to='/about'><li>매장찾기</li></Link>
@@ -116,9 +126,23 @@ export default function Header(props) {
                             <Link to='/mypage'>MYPAGE</Link>
                         </div>
 
+                        <div className="burger_login" onClick={() => closeBurgerPop()}>
+                            {
+                                state.user.login ?
+                                    // <span><b>{state.user.writer}</b>님 로그인 성공!</span>
+                                    <Link to='/'
+                                        onClick={logout}
+                                    >LOGOUT</Link>
+                                    : <Link to='/login'>LOGIN</Link>
+                            }
+                            <Link to='/cart'>CART</Link>
+                            <Link to='/mypage'>MYPAGE</Link>
+                        </div>
+
                     </div>
 
                 </div>
+
             </header>
 
         </div>
