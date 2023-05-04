@@ -2,7 +2,7 @@ import React from 'react';
 
 const NaverLogin = () => {
     const handleClick = () => {
-        const clientId = '네이버 클라이언트 ID';
+        const clientId = 'dlt4ivmCKGbs5lqXUwro';
         const redirectURI = encodeURIComponent('http://localhost:3000/naver-callback');
         const state = encodeURIComponent('임의의 문자열');
 

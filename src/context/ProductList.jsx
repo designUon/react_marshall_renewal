@@ -11,39 +11,48 @@ export default function ProductList() {
 
     const [likedProducts, setLikedProducts] = useState([]);
 
-    const cartaddCheck =()=>{
-        if(window.confirm("장바구니에 추가 하시겠습니까?")) {
-            navigate('/cart');
-        } else {
-            navigate('/product');
-        }
-    }
+    // const cartaddCheck =()=>{
+    //     if(window.confirm("장바구니에 추가 하시겠습니까?")) {
+    //         navigate('/cart');
+    //     } else {
+    //         navigate('/product');
+    //     }
+    // }
 
     const cartClick = (product) => {
 
-        // 값이 있으면 삭제
-        if (value.state.cartlist.find((cart) => (cart.id === product.id))) {
+        // // 값이 있으면 삭제
+        // if (value.state.cartlist.find((cart) => (cart.id === product.id))) {
 
-            // filter를 통해서 삭제
-            // id가 같다면 제외하고 배열생성
-            const newcartlist = value.state.cartlist.filter(
-                (cart) => (cart.id !== product.id))
-            value.action.setCartlist(newcartlist);
-        } else {
-            // 값이 없으면 추가
-            // 클릭했을 때 값 추가 >> 매개변수로 받아오기
-            const newcart = {
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.image,
+        //     // filter를 통해서 삭제
+        //     // id가 같다면 제외하고 배열생성
+        //     const newcartlist = value.state.cartlist.filter(
+        //         (cart) => (cart.id !== product.id))
+        //     value.action.setCartlist(newcartlist);
+            
+        // } else {
+        //     // 값이 없으면 추가
+        //     // 클릭했을 때 값 추가 >> 매개변수로 받아오기
+
+            if(window.confirm("장바구니에 추가 하시겠습니까?")) {
+                
+                const newcart = {
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                }
+                const newCartlist = value.state.cartlist.concat(newcart);
+                value.action.setCartlist(newCartlist);
+
+                navigate('/cart');
+
+            } else {
+
+                navigate('/product');
+            
             }
-            const newCartlist = value.state.cartlist.concat(newcart);
-            value.action.setCartlist(newCartlist);
-        }
         
-        cartaddCheck();
-
     }
 
 
@@ -54,33 +63,6 @@ export default function ProductList() {
     });
 
     const isVisible = entry?.isIntersecting;
-
-
-
-    // // ---------------------------------------------------------------------------------------
-
-    // const likeClick = (productId) => {
-    //     if (likedProducts.includes(productId)) {
-    //         setLikedProducts(likedProducts.filter(id => id !== productId));
-    //     } else {
-    //         setLikedProducts([...likedProducts, productId]);
-    //     }
-    // };
-
-
-    // // ---------------------------------------------------------------------------------------
-
-
-    // const likeButton = (productId) => {
-    //     const isLiked = likedProducts.includes(productId);
-    //     const imageName = isLiked ? 'like.svg' : 'unlike.svg';
-    //     const buttonText = isLiked ? 'Unlike' : 'Like';
-    //     return (
-    //         <button className="like_btn" onClick={() => likeClick(productId)}>
-    //             <img src={process.env.PUBLIC_URL + `/${imageName}`} alt={buttonText} />
-    //         </button>
-    //     );
-    // };
 
     const likeClick = (product) => {
 
