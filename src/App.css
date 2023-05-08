@@ -80,24 +80,29 @@ a {
   }
 
   .main_menu a li {
-    width: 80px;
+    width: 85px;
+    height: 30px;
     margin-left: 40px;
     float: left;
     text-align: center;
-    /* transition: all 0.5s; */
-    /* border: 1px solid wheat; */
+    font-weight: 100;
+    overflow: hidden;
+    transition: all 0.5s;
   }
 
-  .main_menu a li:hover {
-    font-weight: 600;
+  .main_menu>a>li:hover {
+    font-weight: 900;
+    height: 160px;
+    transition: all 0.5s;
     /* transition: all 0.5s; */
   }
 
   .sub_menu {
     margin-top: 10px;
-    display: none;
+    /* font-weight: 100; */
+    /* display: none; */
   }
-
+  
   .sub_menu a li {
     width: 80px;
     height: 30px;
@@ -106,8 +111,15 @@ a {
     position: relative;
     line-height: 30px;
     left: -40px;
+    /* transition: all 0.5s; */
   }
-
+  
+  .sub_menu a li:hover {
+    font-weight: 900;
+    border-bottom: 1px solid #b8b29e;
+    box-sizing: border-box;
+    /* transition: all 0.5s; */
+  }
 
   .header_logo {
     width: 160px;
