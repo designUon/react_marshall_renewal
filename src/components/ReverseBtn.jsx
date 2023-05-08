@@ -15,6 +15,9 @@ const styles = {
     footer: {
         transition: 'background-color 500ms ease-in-out'
     },
+    submenu_li: {
+        transition: 'background-color 500ms ease-in-out'
+    },
     reversed: {
         color: '#b8b29e',
         backgroundColor: 'white'
@@ -40,12 +43,26 @@ export default function ReverseBtn() {
         const header = document.querySelector('header');
         const footer = document.querySelector('footer');
         const style = isReversed ? styles.reversed : styles.normal;
+        const submenu_li = document.querySelectorAll('.sub_menu a li');
 
-        Object.assign(html.style, styles.html, style);
-        Object.assign(body.style, styles.body, style);
-        Object.assign(header.style, styles.header, style);
-        Object.assign(footer.style, styles.footer, style);
-    });
+        if (html) {
+            Object.assign(html.style, styles.html, style);
+        }
+        if (body) {
+            Object.assign(body.style, styles.body, style);
+        }
+        if (header) {
+            Object.assign(header.style, styles.header, style);
+        }
+        if (footer) {
+            Object.assign(footer.style, styles.footer, style);
+        }
+        if (submenu_li.length > 0) {
+            for (let i = 0; i < submenu_li.length; i++) {
+                Object.assign(submenu_li[i].style, styles.submenu_li, style);
+            }
+        }
+    }, [isReversed]);
 
     return (
         <div>

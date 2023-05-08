@@ -34,7 +34,8 @@ export default function Header(props) {
 
     return (
         <div>
-            <header>
+            <header className='header'>
+                <div className="header_line"></div>
                 <div className="header_wrap">
                     {/* <Link to='/' className='logo_box'> */}
                     <a href="/react_marshall_renewal" className='logo_box'>
@@ -48,7 +49,7 @@ export default function Header(props) {
                     </a>
                     {/* </Link> */}
                     <ul className="main_menu">
-                        <Link to='/product'><li>PRODUCT
+                        <Link to='/product'><li className='menuli'>PRODUCT
                             <ul className='sub_menu'>
                                 <Link to='/product'><li>스피커</li></Link>
                                 <Link to='/product'><li>헤드폰</li></Link>
@@ -56,7 +57,7 @@ export default function Header(props) {
                                 <Link to='/product'><li>악세사리</li></Link>
                             </ul>
                         </li></Link>
-                        <Link to='/about'><li>ABOUT
+                        <Link to='/about'><li className='menuli'>ABOUT
                             <ul className='sub_menu'>
                                 <Link to='/about'><li>스토리</li></Link>
                                 <Link to='/about'><li>매장찾기</li></Link>
