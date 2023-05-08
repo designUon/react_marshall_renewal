@@ -2,17 +2,20 @@ import React, { useContext, useState, useEffect } from 'react';
 import ProductContext from '../context/ProductContext';
 
 export default function Cart() {
+
+    // const {cid} = props.cart;
     const { state, action } = useContext(ProductContext);
     const [checkedItems, setCheckedItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    const deleteCart = (id) => {
-        if (!state.cartlist.find((cart) => cart.id === id)) {
+    // id값 말고 cid값으로 삭제
+    const deleteCart = (cid) => {
+        if (!state.cartlist.find((cart) => cart.cid === cid)) {
             return;
         }
-        const newCartList = state.cartlist.filter((cart) => cart.id !== id);
+        const newCartList = state.cartlist.filter((cart) => cart.cid !== cid);
         action.setCartlist(newCartList);
-        setCheckedItems(checkedItems.filter((checkedItem) => checkedItem !== String(id)));
+        setCheckedItems(checkedItems.filter((checkedItem) => checkedItem !== String(cid)));
     };
     
 
@@ -47,11 +50,11 @@ export default function Cart() {
             <p className="cart_title">CART LIST</p>
             <ul className="cart_wrap">
                 {state.cartlist.map((product) => (
-                    <li key={product.id} className="cart_box">
+                    <li key={product.cid} className="cart_box">
                         <input
                             type="checkbox"
-                            name={product.id}
-                            value={product.id}
+                            name={product.cid}
+                            value={product.cid}
                             className="cart_check"
                             onChange={handleCheckboxChange}
                         />
@@ -61,7 +64,7 @@ export default function Cart() {
                         <div className="cart_text">
                             <span className="cart_name">{product.name}</span>
                             <p className="cart_price">{product.price.toLocaleString()}</p>
-                            <button className="cart_del_btn" onClick={() => deleteCart(product.id)}>
+                            <button className="cart_del_btn" onClick={() => deleteCart(product.cid)}>
                                 X
                             </button>
                         </div>

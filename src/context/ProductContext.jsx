@@ -2,6 +2,8 @@ import React, {useState} from "react";
 
 const ProductContext = React.createContext("");
 
+let cid = 2;
+
 const ProductContextProvider = ({ children }) => {
     const [productList, setProductList] = useState([
         { id: 1, name: "Acton-ii", price: 440000, image: "/img/001_marshall-acton-ii-black.png" },
@@ -15,7 +17,6 @@ const ProductContextProvider = ({ children }) => {
         return {
             ...product,
             price: product.price,
-            // price: product.price.toLocaleString(),
             image: process.env.PUBLIC_URL + product.image
         };
     }));
@@ -29,12 +30,15 @@ const ProductContextProvider = ({ children }) => {
             //     name : "Acton-ii",
             //     image: "/001_marshall-acton-ii-black.png"
             // }
+            // { cid:1, id: 1, name: "Acton-ii", price: 440000, image: "/img/001_marshall-acton-ii-black.png" },
         ]
     )
     
     const [likelist, setLikelist] = useState([]);
 
+    // const [id, setId] = useState();
     const [id, setId] = useState();
+    
     const [user, setUser] = useState(
         {
             userId : "user",
@@ -42,11 +46,18 @@ const ProductContextProvider = ({ children }) => {
         }
     )
 
+    
+    // 장바구니에 추가했을때 중복제품 별도로 id값 주기
+    const cidCount = () => {
+        cid++;
+    }
+
 
     const value = {
-        state : {productList, cartlist, likelist, id, user},
-        action : {setProductList, setCartlist, setLikelist, setId, setUser}
+        state : {productList, cartlist, likelist, id, cid, user},
+        action : {setProductList, setCartlist, setLikelist, setId, cidCount, setUser}
     }
+
 
 
     return (

@@ -8,40 +8,24 @@ export default function ProductList() {
     const navigate = useNavigate();
 
     const value = useContext(ProductContext);
+    const { state, action } = useContext(ProductContext);
 
     const [likedProducts, setLikedProducts] = useState([]);
 
-    // const cartaddCheck =()=>{
-    //     if(window.confirm("장바구니에 추가 하시겠습니까?")) {
-    //         navigate('/cart');
-    //     } else {
-    //         navigate('/product');
-    //     }
-    // }
-
     const cartClick = (product) => {
-
-        // // 값이 있으면 삭제
-        // if (value.state.cartlist.find((cart) => (cart.id === product.id))) {
-
-        //     // filter를 통해서 삭제
-        //     // id가 같다면 제외하고 배열생성
-        //     const newcartlist = value.state.cartlist.filter(
-        //         (cart) => (cart.id !== product.id))
-        //     value.action.setCartlist(newcartlist);
-            
-        // } else {
-        //     // 값이 없으면 추가
-        //     // 클릭했을 때 값 추가 >> 매개변수로 받아오기
 
             if(window.confirm("장바구니에 추가 하시겠습니까?")) {
                 
                 const newcart = {
+                    cid : value.state.cid,
                     id: product.id,
                     name: product.name,
                     price: product.price,
                     image: product.image,
                 }
+
+                value.action.cidCount();
+
                 const newCartlist = value.state.cartlist.concat(newcart);
                 value.action.setCartlist(newCartlist);
 
@@ -81,8 +65,6 @@ export default function ProductList() {
             const newLikelist = value.state.likelist.concat(newlike);
             value.action.setLikelist(newLikelist);
         }
-
-        // navigate('/mypage');
     }
 
     // // -------------------------------------------------------------------------------------
@@ -100,10 +82,6 @@ export default function ProductList() {
                             <img src={product.image} alt={product.name} className="productlist_image" />
                             <span>{product.name}</span>
                             <p>{product.price.toLocaleString()}</p>
-
-                            {/* <span onClick={() => { cartClick(product) }} >
-                                <span><b>+</b></span>
-                            </span> */}
 
                             <div className="product_btns">
                                 {/* {likeButton(product.id)} */}
