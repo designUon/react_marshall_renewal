@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_marshall_renewal/static/css/main.294f815e.css",
+    "main.css": "/react_marshall_renewal/static/css/main.44243735.css",
     "main.js": "/react_marshall_renewal/static/js/main.110491c7.js",
     "static/js/787.2b971896.chunk.js": "/react_marshall_renewal/static/js/787.2b971896.chunk.js",
     "static/media/marshall_slide_04.jpeg": "/react_marshall_renewal/static/media/marshall_slide_04.37eb6705ed2a710a7842.jpeg",
@@ -13,12 +13,12 @@
     "static/media/007_marshall-emberton-ii-black-brass.png": "/react_marshall_renewal/static/media/007_marshall-emberton-ii-black-brass.576f4ca0863a319d27d5.png",
     "static/media/006_marshall-stockwell-ii-black-brass.png": "/react_marshall_renewal/static/media/006_marshall-stockwell-ii-black-brass.e77b889419cd964b3ea0.png",
     "index.html": "/react_marshall_renewal/index.html",
-    "main.294f815e.css.map": "/react_marshall_renewal/static/css/main.294f815e.css.map",
+    "main.44243735.css.map": "/react_marshall_renewal/static/css/main.44243735.css.map",
     "main.110491c7.js.map": "/react_marshall_renewal/static/js/main.110491c7.js.map",
     "787.2b971896.chunk.js.map": "/react_marshall_renewal/static/js/787.2b971896.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.294f815e.css",
+    "static/css/main.44243735.css",
     "static/js/main.110491c7.js"
   ]
 }
