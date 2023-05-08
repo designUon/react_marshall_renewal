@@ -13,25 +13,28 @@ import { ProductContextProvider } from "./context/ProductContext";
 import ReverseBtn from "./components/ReverseBtn";
 import NaverLogin from "./components/NaverLogin";
 import NaverCallback from "./components/NaverCallback";
+import { StoryContextProvider } from "./context/StoryContext";
 
 function App() {
   return (
     <ProductContextProvider>
-      <div className="App">
-        <ReverseBtn />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/join" element={<LoginJoin />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/naver-login" element={<NaverLogin />} />
-          <Route path="/naver-callback" element={<NaverCallback />} />
-        </Routes>
-        <Footer />
-      </div>
+      <StoryContextProvider>
+        <div className="App">
+          <ReverseBtn />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/join" element={<LoginJoin />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/mypage" element={<MyPage />} />
+            <Route path="/naver-login" element={<NaverLogin />} />
+            <Route path="/naver-callback" element={<NaverCallback />} />
+          </Routes>
+          <Footer />
+        </div>
+      </StoryContextProvider>
     </ProductContextProvider>
   );
 }

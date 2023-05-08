@@ -95,10 +95,44 @@
 
 .story_text{
     width: 100%;
+    height: 102px;
     z-index: 2;
     position: absolute;
+    bottom: 0;
+    bottom: -102px;
     text-align: center;
-    color: #181818;
+    transition: all 1s;
+    color: #b8b29e;
+    opacity: 0;
+    background-color: rgba(24, 24, 24, 0.8);
 }
 
+.story_box:hover .story_text{
+    bottom:0;
+    opacity: 1;
+    transition: all 1s;
+}
 
+.story_text h4{
+    margin: 12px 0;
+}
+
+.story_text p{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 7px;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 20px;
+    border-top: 1px solid #b8b29e;
+}
+
+.story_text p::after {
+    content: "...";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

@@ -17,15 +17,13 @@ export default function Cart() {
         action.setCartlist(newCartList);
         setCheckedItems(checkedItems.filter((checkedItem) => checkedItem !== String(cid)));
     };
-    
-
 
     const handleCheckboxChange = (event) => {
         const item = event.target.value;
         const isChecked = event.target.checked;
     
         if (isChecked) {
-            if (!state.cartlist.find((cart) => cart.id === parseInt(item))) {
+            if (!state.cartlist.find((cart) => cart.cid === parseInt(item))) {
                 return;
             }
             setCheckedItems([...checkedItems, item]);
@@ -37,7 +35,7 @@ export default function Cart() {
     useEffect(() => {
         let price = 0;
         checkedItems.forEach((item) => {
-            const cartItem = state.cartlist.find((cart) => cart.id === parseInt(item));
+            const cartItem = state.cartlist.find((cart) => cart.cid === parseInt(item));
             if (cartItem) {
                 price += cartItem.price;
             }

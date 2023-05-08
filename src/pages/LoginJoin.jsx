@@ -85,8 +85,6 @@ export default function LoginJoin() {
     return (
         <div className='join_wrap'>
 
-            <h3>d</h3>
-
             <div className="join_inputbox">
                 <div className="join_text">ID</div>
                 <input type="text" />

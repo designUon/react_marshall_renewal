@@ -22,6 +22,7 @@ export default function ProductList() {
                     name: product.name,
                     price: product.price,
                     image: product.image,
+                    
                 }
 
                 value.action.cidCount();

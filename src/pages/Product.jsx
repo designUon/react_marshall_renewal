@@ -6,7 +6,6 @@ import ProductList from '../context/ProductList'
 import ProductSlide from '../components/ProductSlide'
 
 import '../css/product.css'
-import Wave from '../components/Wave'
 
 export default function Product() {
 
