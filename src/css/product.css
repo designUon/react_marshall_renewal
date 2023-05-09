@@ -3,6 +3,7 @@
     /* height: 100vh; */
 }
 
+
 .product_slide {
     height: 50vh;
     /* line-height: 35vh; */
@@ -80,12 +81,6 @@
     /* position: relative; */
 }
 
-.productlist_image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 25px;
-}
 
 .productlist_box {
     width: 300px;
@@ -95,6 +90,14 @@
     float: left;
     box-sizing: border-box;
     position: relative;
+}
+
+.productlist_image {
+    /* width: 300px; */
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+    margin-bottom: 25px;
 }
 
 .productlist_wrap {
@@ -378,4 +381,62 @@
         opacity: 0;
         transform: scale(30);
     }
+}
+
+
+
+
+
+/* -------------------------반응형 / Tab------------------------------- */
+
+@media (max-width:1200px) {
+
+    .main_video{
+        /* border: 1px solid wheat; */
+        height: 50vh;
+    }
+
+    .product_slide {
+        height: 50vh;
+        /* line-height: 35vh; */
+        box-sizing: border-box;
+    }
+
+    #swiper2 {
+        height: 50vh;
+        margin: 0;
+        /* border: 1px solid #E2DDC9; */
+    }
+    
+    #swiper2 .swiper-slide {
+        background-position: center;
+        /* background-size: cover; */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 350px;
+        height: 450px;
+        background-color: transparent;
+        /* border: 1px solid #E2DDC9; */
+    }
+    
+    #swiper2 .swiper-slide img {
+        display: block;
+        width: 100%;
+        /* height: 350px; */
+    }
+
+    .productlist_wrap {
+        width: 810px;
+        height: 950px;
+        margin-top: 50px;
+        margin-bottom: 300px;
+    }
+
+    .productlist_box {
+        width: 250px;
+        height: 350px;
+        box-sizing: border-box;
+        margin: 10px 10px;
+    }
+
 }

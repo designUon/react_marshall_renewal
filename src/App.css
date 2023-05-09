@@ -49,10 +49,6 @@ a {
 }
 
 
-
-
-
-
   /* ------------------ header ------------------ */
 
   .header {
@@ -66,7 +62,7 @@ a {
   .header_line{
     width: 100%;
     height: 65px;
-    z-index: 1000;
+    z-index: 100;
     border-bottom: 1px solid #b8b29e;
     position: absolute;
     pointer-events: none;
@@ -74,24 +70,21 @@ a {
 
   .header_wrap {
     width: 85%;
-    height: 40px;
+    height: 55px;
     margin: 0 auto;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    padding-top: 10px;
     position: relative;
     /* border-bottom: 1px solid wheat; */
   }
 
   .main_menu {
-    top: 23px;
+    top: 33px;
     right: 220px;
     font-size: 18px;
     position: absolute;
     /* background-color: #61dafb; */
   }
-
-  /* .main_menu>a:first-child>li{
-    margin-right: 10px;
-  } */
 
   .main_menu a li {
     width: 120px;
@@ -111,7 +104,7 @@ a {
   }
   
   .sub_menu {
-    margin-top: 21px;
+    margin-top: 12px;
   }
   
   .sub_menu a li {
@@ -135,7 +128,7 @@ a {
   .header_logo {
     width: 130px;
     height: 40px;
-    padding-top: 10px;
+    padding-top: 5px;
     background-color: transparent;
     /* border: 1px solid wheat; */
   }
@@ -149,7 +142,7 @@ a {
     width: 200px;
     height: 40px;
     font-size: 12px;
-    margin-top: -34px;
+    margin-top: -30px;
     line-height: 38px;
     z-index: 10;
     /* border: 1px solid wheat; */
@@ -217,11 +210,6 @@ a {
   }
 
 
-
-
-
-
-
 /* -------------------------반응형 / PC------------------------------- */
 
 
@@ -232,6 +220,18 @@ a {
   }
 
   .burger_menu{
+    display: none;
+  }
+
+  .burger_menu li{
+    display: none;
+  }
+
+  .burger_close_btn{
+    display: none;
+  }
+
+  .burger_login{
     display: none;
   }
 
@@ -259,11 +259,11 @@ a {
   }
 
   .burger_btn {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     /* background-color: aqua; */
     right: 30px;
-    top: 3px;
+    top: 11px;
     position: absolute;
     cursor: pointer;
     background-color: transparent;
@@ -276,7 +276,7 @@ a {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    z-index: 99;
+    z-index: 200;
     top: 0;
     left: 0;
     display: none;
@@ -313,10 +313,6 @@ a {
     font-weight: 900;
   }
 
-  /* .burger_main_menu li{
-    float: left;
-  } */
-
   .burger_main_menu>a>li{
     margin-bottom: 100px;
   }
@@ -331,15 +327,43 @@ a {
     margin-bottom: 30px;
   }
 
+  .burger_sub_menu li:hover{
+    font-weight: 700;
+  }
+
+  .sub_line, .last_line{
+    /* width: 58px; */
+    width: 0;
+    margin-top: 3px;
+    border-bottom: 1px solid #b8b29e;
+  }
+
+  .burger_sub_menu li:hover .sub_line{
+    width: 58px;
+    transition: all 0.3s;
+  }
+
+  .burger_sub_menu li:hover .last_line{
+    width: 76px;
+    transition: all 0.3s;
+  }
+
   .burger_login{
     position: absolute;
     bottom: 70px;
     right: 70px;
     font-size: 15px;
+    font-weight: 100;
   }
 
   .burger_login a{
+    transition: all 0.3s;
     margin-left: 40px;
+  }
+
+  .burger_login a:hover{
+    transition: all 0.3s;
+    font-weight: 900;
   }
 
 

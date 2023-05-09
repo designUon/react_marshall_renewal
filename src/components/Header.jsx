@@ -38,15 +38,14 @@ export default function Header(props) {
                 <div className="header_line"></div>
                 <div className="header_wrap">
                     {/* <Link to='/' className='logo_box'> */}
-                    <a href="/react_marshall_renewal" className='logo_box'>
-
                         <div className="header_logo">
-                            <img
-                                src={process.env.PUBLIC_URL + `/img/Marshall_logo_${props.isReversed ? 'b' : 'w'}.png`}
-                                alt="button"
-                            />
+                            <a href="/react_marshall_renewal" className='logo_box'>
+                                <img
+                                    src={process.env.PUBLIC_URL + `/img/Marshall_logo_${props.isReversed ? 'b' : 'w'}.png`}
+                                    alt="button"
+                                />
+                            </a>
                         </div>
-                    </a>
                     {/* </Link> */}
                     <ul className="main_menu">
                         <Link to='/product'><li className='menuli'>PRODUCT
@@ -100,32 +99,31 @@ export default function Header(props) {
                             {/* <Link to="/" onClick={() => closeBurgerPop(false)}>Go Home</Link> */}
                             <Link to='/product' onClick={() => closeBurgerPop()}><li>PRODUCT
                                 <ul className='burger_sub_menu'>
-                                    <Link to='/product'><li>스피커</li></Link>
-                                    <Link to='/product'><li>헤드폰</li></Link>
-                                    <Link to='/product'><li>이어폰</li></Link>
-                                    <Link to='/product'><li>악세사리</li></Link>
+                                    <Link to='/product'><li>스피커
+                                        <div className="sub_line"></div>
+                                        </li></Link>
+                                    <Link to='/product'><li>헤드폰
+                                        <div className="sub_line"></div>
+                                        </li></Link>
+                                    <Link to='/product'><li>이어폰
+                                        <div className="sub_line"></div>
+                                        </li></Link>
+                                    <Link to='/product'><li>악세사리
+                                        <div className="sub_line last_line"></div>
+                                        </li></Link>
                                 </ul>
                             </li></Link>
                             <Link to='/about' onClick={() => closeBurgerPop()}><li>ABOUT
                                 <ul className='burger_sub_menu'>
-                                    <Link to='/about'><li>스토리</li></Link>
-                                    <Link to='/about'><li>매장찾기</li></Link>
+                                    <Link to='/about'><li>스토리
+                                        <div className="sub_line"></div>
+                                        </li></Link>
+                                    <Link to='/about'><li>매장찾기
+                                        <div className="sub_line last_line"></div>
+                                        </li></Link>
                                 </ul>
                             </li></Link>
                         </ul>
-
-                        <div className="burger_login">
-                            {
-                                state.user.login ?
-                                    // <span><b>{state.user.writer}</b>님 로그인 성공!</span>
-                                    <Link to='/'
-                                        onClick={logout}
-                                    >LOGOUT</Link>
-                                    : <Link to='/login'>LOGIN</Link>
-                            }
-                            <Link to='/cart'>CART</Link>
-                            <Link to='/mypage'>MYPAGE</Link>
-                        </div>
 
                         <div className="burger_login" onClick={() => closeBurgerPop()}>
                             {
