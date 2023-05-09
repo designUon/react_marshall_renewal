@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_marshall_renewal/static/css/main.1d87ddc8.css",
-    "main.js": "/react_marshall_renewal/static/js/main.3f8a6464.js",
+    "main.css": "/react_marshall_renewal/static/css/main.0d3b09b5.css",
+    "main.js": "/react_marshall_renewal/static/js/main.a72ce83f.js",
     "static/js/787.2b971896.chunk.js": "/react_marshall_renewal/static/js/787.2b971896.chunk.js",
     "static/media/marshall_slide_04.jpeg": "/react_marshall_renewal/static/media/marshall_slide_04.37eb6705ed2a710a7842.jpeg",
     "static/media/004_pl-marshall-speakers-woburn-ii-black-1700x1700.png": "/react_marshall_renewal/static/media/004_pl-marshall-speakers-woburn-ii-black-1700x1700.d788de9393746c9ddb50.png",
@@ -13,12 +13,12 @@
     "static/media/007_marshall-emberton-ii-black-brass.png": "/react_marshall_renewal/static/media/007_marshall-emberton-ii-black-brass.576f4ca0863a319d27d5.png",
     "static/media/006_marshall-stockwell-ii-black-brass.png": "/react_marshall_renewal/static/media/006_marshall-stockwell-ii-black-brass.e77b889419cd964b3ea0.png",
     "index.html": "/react_marshall_renewal/index.html",
-    "main.1d87ddc8.css.map": "/react_marshall_renewal/static/css/main.1d87ddc8.css.map",
-    "main.3f8a6464.js.map": "/react_marshall_renewal/static/js/main.3f8a6464.js.map",
+    "main.0d3b09b5.css.map": "/react_marshall_renewal/static/css/main.0d3b09b5.css.map",
+    "main.a72ce83f.js.map": "/react_marshall_renewal/static/js/main.a72ce83f.js.map",
     "787.2b971896.chunk.js.map": "/react_marshall_renewal/static/js/787.2b971896.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d87ddc8.css",
-    "static/js/main.3f8a6464.js"
+    "static/css/main.0d3b09b5.css",
+    "static/js/main.a72ce83f.js"
   ]
 }
