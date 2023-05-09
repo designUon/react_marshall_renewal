@@ -190,10 +190,14 @@
     }
 
     .home_product_img img{
-        width: 380px;
+        width: 350px;
         position: absolute;
         bottom: 0;
         right: -110px;
+    }
+
+    .home_speaker img{
+        right: -125px;
     }
 
     .home_accessory img{
