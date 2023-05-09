@@ -96,6 +96,7 @@
     position: absolute;
     bottom: 0;
     right: -80px;
+    transition: all 0.5s;
 }
 
 .home_accessory img{
@@ -130,6 +131,10 @@
     /* background-color: aqua; */
 }
 
+.product_warp>a>li:hover .home_product_img>img{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
 
 
 /* -------------------------반응형 / Tab------------------------------- */

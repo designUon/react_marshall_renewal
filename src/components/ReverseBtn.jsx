@@ -24,8 +24,8 @@ const styles = {
     },
     normal: {
         color: '#b8b29e',
-        backgroundColor: 'black'
-    }
+        backgroundColor: '#181818'
+    },
 };
 
 export default function ReverseBtn() {
