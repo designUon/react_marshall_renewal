@@ -1,7 +1,6 @@
 import "./App.css";
-import { Route, Routes, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
@@ -12,7 +11,6 @@ import MyPage from "./pages/MyPage";
 import { ProductContextProvider } from "./context/ProductContext";
 import ReverseBtn from "./components/ReverseBtn";
 import NaverLogin from "./components/NaverLogin";
-import NaverCallback from "./components/NaverCallback";
 import { StoryContextProvider } from "./context/StoryContext";
 
 function App() {
@@ -30,7 +28,6 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/naver-login" element={<NaverLogin />} />
-            <Route path="/naver-callback" element={<NaverCallback />} />
           </Routes>
           <Footer />
         </div>
