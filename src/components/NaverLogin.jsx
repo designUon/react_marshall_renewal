@@ -24,9 +24,8 @@ const NaverLogin = () => {
 
         // 네이버 로그인 버튼을 눌렀을 때, '/login' 페이지 대신 '/naver-callback' 페이지로 이동하도록 수정합니다.
         // navigate('/naver-callback');
-        navigate('/login');
-        // navigate('/');
-        // navigate('/');
+        // navigate('/login');
+        navigate('/');
 
     };
 
