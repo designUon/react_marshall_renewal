@@ -10,7 +10,8 @@ const NaverLogin = () => {
         const clientId = 'dlt4ivmCKGbs5lqXUwro';
         // const redirectURI = encodeURIComponent('http://localhost:3000/naver-callback');
         // const redirectURI = encodeURIComponent('https://designuon.github.io/react_marshall_renewal/naver-callback');
-        const redirectURI = encodeURIComponent('https://designuon.github.io/react_marshall_renewal/login');
+        // const redirectURI = encodeURIComponent('https://designuon.github.io/react_marshall_renewal/login');
+        const redirectURI = encodeURIComponent('https://designuon.github.io/react_marshall_renewal/');
         const state = encodeURIComponent('임의의 문자열');
 
         const url = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectURI}&state=${state}`;
